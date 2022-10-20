@@ -1,10 +1,5 @@
-# -*- coding: utf-8 -*-
-from flask import Flask, render_template, request, session
-
-
-app = Flask(__name__)
-
-app.secret_key = b'52fb96da04fe19cb18b8a5831459be41c7dabf7dd3253e2b7609032579b5c181'
+from flask import render_template, session, request
+from . import app
 
 
 @app.route('/')
@@ -21,7 +16,3 @@ def post_home():
     msg = f'Olá {request.form["x"]}, sua senha é {session["senha"]}!'
 
     return render_template('index.html', msg=msg)
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
