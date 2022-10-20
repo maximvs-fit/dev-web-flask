@@ -1,14 +1,14 @@
+from senha import senha_bp
 from flask import render_template, session, request
-from . import app
 
 
-@app.route('/')
+@senha_bp.route('/')
 def get_home():
     print('chamou o get')
     return render_template('index.html')
 
 
-@app.route('/', methods=['POST'])
+@senha_bp.route('/', methods=['POST'])
 def post_home():
     print('chamou o post')
     senha_atual = session.get('senha', 0)
