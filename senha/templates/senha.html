@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<form method="post">
+    <label for="nome">Nome</label>
+    <input id="nome" name="x" required>
+
+    <button type="submit">Enviar</button>
+</form>
+
+<div>{{ msg }}</div>
+{% endblock %}

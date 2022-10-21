@@ -6,14 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <form method="post">
-        <label for="nome">Nome</label>
-        <input id="nome" name="x" required>
-
-        <button type="submit">Enviar</button>
-    </form>
-
-    <div>{{ msg }}</div>
+    <div id="header">Aqui é o header</div>
+    <div id="content">{% block conteudo %}{% endblock %}</div>
+    <div id="footer">Aqui é o footer</div>
 </body>
 </html>
