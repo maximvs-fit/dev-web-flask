@@ -5,10 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #header{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="header">Aqui é o header</div>
+    <div id="header">
+        <h1>Aqui é o header</h1>
+        {% if logout_link %}<a href="{{ logout_link }}">Sair</a>{% endif %}
+    </div>
     <div id="content">{% block conteudo %}{% endblock %}</div>
     <div id="footer">Aqui é o footer</div>
 </body>
