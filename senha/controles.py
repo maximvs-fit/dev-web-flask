@@ -17,7 +17,7 @@ def get_home():
         return redirect(url_for('.get_login'))
 
     print(f'GET: O cookie enviado pelo navegador é: {id_sessao}')
-    return render_template('senha.html', logout_link=url_for('.logout'))
+    return render_template('senha.html')
 
 
 @senha_bp.route('/', methods=['POST'])
@@ -53,7 +53,7 @@ def post_login():
 @senha_bp.route('/logout', methods=['get'])
 def logout():
     id_sessao = request.cookies.get('id_sessao')
-    session.pop(id_sessao)
+    session.pop(id_sessao, None)
 
     resposta = make_response(redirect(url_for('.get_login')))
     resposta.set_cookie('id_sessao', '')
