@@ -1,7 +1,7 @@
 from flask import Blueprint
 
-senha_bp = Blueprint(
-    'senha',
+login_bp = Blueprint(
+    'login',
     __name__,
     template_folder='templates'
 )
