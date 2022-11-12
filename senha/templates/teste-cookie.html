@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+<div>Digite seu nome para receber um cookie:</div>
+<form method="post">
+    <label for="nome">Nome</label>
+    <input id="nome" name="nome" required>
+
+    <button type="submit">Enviar</button>
+</form>
+{% endblock %}
