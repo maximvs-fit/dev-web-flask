@@ -1,0 +1,190 @@
+body {
+  background: #00050b;
+  color: #ececec;
+  line-height: 2;
+  font-family: MontSerrat;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+#content {
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+#about {
+  flex: 3;
+  background: #0d181d;
+  padding: 25px;
+  min-width: 340px;
+}
+
+#about h2 {
+  color: #116fff;
+  font-size: 1.9em;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#about h2::after {
+  content: '';
+  width: 55px;
+  height: 3px;
+  display: block;
+  background: #0062f8;
+}
+
+#about p {
+  margin-bottom: 25px;
+}
+
+.letter-spacing-2 {
+  letter-spacing: 2px;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-white-smoke {
+  color: #ececec;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.color {
+  color: #116fff;
+}
+
+#info {
+  flex: 2;
+  padding: 25px 50px;
+  min-width: 320px;
+}
+
+#info h3 {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+#info h4 {
+  font-size: 1.1em;
+  font-weight: 200;
+  margin-top: 25px;
+}
+
+.info-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.info-card {
+  display: flex;
+}
+
+.info-card-image {
+  padding: 13px 15px 0 0;
+}
+
+.info-card-label {
+  margin-bottom: initial;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #fff;
+}
+
+.info-card-description {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.font-16 {
+  font-size: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #011219;
+}
+
+tbody {
+  background: #122127;
+}
+
+tbody tr:nth-child(odd) {
+  border-top: 1px solid #424242;
+}
+
+td,
+th {
+  padding: 5px;
+}
+
+.original-price {
+  font-size: 14px;
+  color: darkgrey;
+}
+
+.new-price {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.btn-base {
+  font-weight: 700;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+  text-shadow: 2px 1px rgba(0, 0, 0, .2);
+}
+
+.btn-base:hover {
+  transform: scale(1.1);
+  transition: .3s;
+  color: inherit;
+}
+
+#btn-enroll-now {
+  border-radius: 50px;
+  font-size: 1.5em;
+  padding: 10px 25px;
+  background: #f40946;
+}
+
+#transfer-now {
+  color: #fff;
+}
+
+#btn-more-info {
+  background: #ff5722;
+  font-size: 1em;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#more-info-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
