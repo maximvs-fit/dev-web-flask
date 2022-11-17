@@ -2,6 +2,27 @@ from flask import render_template, request
 
 from contato import contato_bp
 
+import json
+
+
+@contato_bp.post('/usuario')
+def teste_ajax():
+    dados = request.json
+    print(type(dados))
+    print(dados)
+
+    dicionario = {
+        'resposta1': True,
+        'resposta2': 25,
+        'resposta3': [1, 2, 3],
+        'resposta4': 'olá mundo!'
+    }
+    return json.dumps(dicionario)
+
+@contato_bp.get('/html')
+def teste_ajax_html():
+    return render_template('teste-ajax.html')
+
 
 @contato_bp.route('/')
 def get_contato():

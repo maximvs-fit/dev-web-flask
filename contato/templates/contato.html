@@ -1,8 +1,18 @@
 {% extends 'base.html' %}
 
 {% block styles %}
-<link rel="stylesheet" type="text/css"
-  href="{{ url_for('static', filename='contato.css') }}">
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='estilos/contato.css') }}"
+/>
+{% endblock %}
+
+{% block scripts %}
+<script
+  src="{{ url_for('static', filename='scripts/teste.js') }}"
+  defer
+></script>
 {% endblock %}
 
 {% block conteudo %}
@@ -12,24 +22,24 @@
   <form method="post">
     <div class="linha">
       <label for="name">Nome:</label>
-      <input id="name" name="nome" required>
+      <input id="name" name="nome" required />
     </div>
 
     <div class="linha">
       <label for="email">e-mail:</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email" required />
     </div>
 
     <div class="linha">
       <label for="phone">Telefone:</label>
-      <input type="number" id="phone" name="telefone" required>
+      <input type="number" id="phone" name="telefone" required />
     </div>
 
     <div class="linha">
       <label for="subject">Assunto:</label>
       <select id="subject" name="assunto" required>
         <option value="">Selecione uma opção</option>
-        <option value="1">Atendimento ao cliente </option>
+        <option value="1">Atendimento ao cliente</option>
         <option value="2">Secretaria de Graduação</option>
         <option value="3">Secretaria de Pós Graduação</option>
         <option value="4">Financeiro</option>
@@ -39,38 +49,65 @@
 
     <div class="linha">
       <label for="message">Mensagem</label>
-      <textarea id="message" name="mensagem" rows="4"
-        placeholder="Digite aqui sua mensagem" maxlength="500" minlength="50"
-        required></textarea>
+      <textarea
+        id="message"
+        name="mensagem"
+        rows="4"
+        placeholder="Digite aqui sua mensagem"
+        maxlength="500"
+        minlength="50"
+        required
+      ></textarea>
     </div>
 
     <fieldset>
       <legend>Como nos conheceu?</legend>
       <span>
-        <input type="radio" id="google" name="origem" value="Google Ads"
-          required>
+        <input
+          type="radio"
+          id="google"
+          name="origem"
+          value="Google Ads"
+          required
+        />
         <label for="google">Google Ads</label>
       </span>
       <span>
-        <input type="radio" id="instagram" name="origem" value="Instagram"
-          required>
+        <input
+          type="radio"
+          id="instagram"
+          name="origem"
+          value="Instagram"
+          required
+        />
         <label for="instagram">Insta</label>
       </span>
       <span>
-        <input type="radio" id="podcasts" name="origem" value="Podcasts"
-          required>
+        <input
+          type="radio"
+          id="podcasts"
+          name="origem"
+          value="Podcasts"
+          required
+        />
         <label for="podcasts">Podcasts</label>
       </span>
       <span>
-        <input type="radio" id="tv" name="origem" value="TV" required>
+        <input type="radio" id="tv" name="origem" value="TV" required />
         <label for="tv">TV</label>
       </span>
       <span>
-        <input type="radio" id="friends" name="origem" value="Amigos" required>
+        <input
+          type="radio"
+          id="friends"
+          name="origem"
+          value="Amigos"
+          required
+        />
         <label for="friends">Amigos</label>
       </span>
       <span>
-        <input type="radio" id="other" name="origem" value="Outros" required>
+        <input type="radio" id="other" name="origem" value="Outros" required />
         <label for="other">Outros</label>
       </span>
     </fieldset>
@@ -81,4 +118,29 @@
     </div>
   </form>
 </div>
+
+<div>
+  <button id="btn-teste-2" onclick="testeAsync2()">Teste Async 2</button>
+</div>
+<div>
+  <button id="btn-teste-2" onclick="testeAsync3()">Teste Async 3</button>
+</div>
+
+<div>
+  <button id="btn-teste" onclick="testeAjax()">Teste AJAX</button>
+</div>
+
+<div>
+  <button id="btn-teste" onclick="testeBotao2()">Teste botão 2</button>
+</div>
+
+<div id="div-a-ser-preenchida"></div>
+
+<script>
+  function testeBotao() {
+    if (confirm("escrever log?")) {
+      console.log("log do clicou no botão");
+    }
+  }
+</script>
 {% endblock %}
